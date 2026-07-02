@@ -8,6 +8,18 @@ The goal is to make AI agents discoverable, trustworthy, installable, and commer
 
 Agent Transit is at the concept stage. This document is a product spec, not a description of a live system — there is no implementation yet. The feature lists below describe intended V1 behavior.
 
+The repository is scaffolded but not built: directories, specs, and stub files map out the V1 shape, and every stub is intentionally unimplemented.
+
+## Repository Layout
+
+- `docs/` — Architecture sketch and the V1 manifest spec.
+- `apps/web/` — Marketplace frontend (buyer, creator, and admin surfaces).
+- `apps/api/` — Backend API (submissions, scanning, publishing, commerce, workspaces, admin).
+- `packages/manifest/` — Manifest JSON Schema and validation contract.
+- `packages/scanner/` — V1 static scan pipeline.
+- `packages/db/` — Database schema outline for marketplace entities.
+- `examples/hello-agent/` — Reference template package demonstrating the manifest contract.
+
 ## Concept
 
 Agent Transit is a public marketplace where creators can publish packaged AI agent templates and buyers can browse, install, purchase, and manage them inside a team workspace.

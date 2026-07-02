@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-transit.dev/schema/agent-manifest-1.0.json",
+  "title": "Agent Transit Template Manifest (V1 draft skeleton)",
+  "description": "Draft skeleton. Field-level constraints are TODO; see docs/manifest-spec.md.",
+  "type": "object",
+  "required": [
+    "manifestVersion",
+    "name",
+    "displayName",
+    "version",
+    "description",
+    "language",
+    "entrypoint",
+    "setup",
+    "env",
+    "integrations",
+    "permissions",
+    "outboundServices",
+    "pricing",
+    "deploy",
+    "support",
+    "license"
+  ],
+  "properties": {
+    "manifestVersion": { "const": "1.0" },
+    "name": { "type": "string" },
+    "displayName": { "type": "string" },
+    "version": { "type": "string" },
+    "description": { "type": "string" },
+    "language": { "enum": ["javascript", "typescript", "python"] },
+    "entrypoint": { "type": "string" },
+    "categories": { "type": "array", "items": { "type": "string" } },
+    "setup": {
+      "type": "object",
+      "required": ["steps"],
+      "properties": {
+        "steps": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "env": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "description", "required", "secret"],
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "required": { "type": "boolean" },
+          "secret": { "type": "boolean" }
+        }
+      }
+    },
+    "integrations": { "type": "array", "items": { "type": "string" } },
+    "permissions": { "type": "array", "items": { "type": "string" } },
+    "outboundServices": { "type": "array", "items": { "type": "string" } },
+    "pricing": {
+      "type": "object",
+      "required": ["model"],
+      "properties": {
+        "model": { "enum": ["free", "one_time"] },
+        "amount": { "type": "integer", "description": "Price in cents. Required when model is one_time." },
+        "currency": { "type": "string" }
+      }
+    },
+    "deploy": {
+      "type": "object",
+      "properties": {
+        "targets": { "type": "array", "items": { "type": "string" } },
+        "export": {
+          "type": "object",
+          "properties": {
+            "format": { "enum": ["zip"] }
+          }
+        }
+      }
+    },
+    "support": {
+      "type": "object",
+      "required": ["policy"],
+      "properties": {
+        "policy": { "type": "string" },
+        "contact": { "type": "string" }
+      }
+    },
+    "license": { "type": "string", "description": "SPDX license identifier." }
+  }
+}
