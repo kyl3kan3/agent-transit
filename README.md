@@ -1067,7 +1067,7 @@ The V1 architecture is complete when an implementation can demonstrate:
 ### Architecture References
 
 - [Next.js App Router documentation](https://nextjs.org/docs/app)
-- [Neon Auth](https://neon.com/docs/guides/neon-auth)
+- [Neon Auth](https://neon.com/docs/auth/overview)
 - [Neon branching workflows](https://neon.com/docs/guides/branching-intro)
 - [Vercel Blob](https://vercel.com/docs/vercel-blob)
 - [Vercel Private Blob signed access](https://vercel.com/docs/vercel-blob/private-storage)
