@@ -1,0 +1,6 @@
+{
+  "name": "@agent-transit/db",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Database schema for marketplace entities. Scaffold only — not implemented."
+}

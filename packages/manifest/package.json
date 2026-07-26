@@ -1,0 +1,7 @@
+{
+  "name": "@agent-transit/manifest",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Manifest contract: JSON Schema and validation for agent template packages. Scaffold only — not implemented.",
+  "main": "src/validate.ts"
+}

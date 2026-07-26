@@ -1,0 +1,6 @@
+{
+  "name": "@agent-transit/api",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Backend API for submissions, scanning, publishing, commerce, workspaces, and admin. Scaffold only — not implemented."
+}

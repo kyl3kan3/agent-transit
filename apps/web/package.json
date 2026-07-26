@@ -1,0 +1,6 @@
+{
+  "name": "@agent-transit/web",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Marketplace frontend. Scaffold only — no framework wired up yet."
+}

@@ -1,0 +1,38 @@
+{
+  "manifestVersion": "1.0",
+  "name": "hello-agent",
+  "displayName": "Hello Agent",
+  "version": "0.1.0",
+  "description": "Minimal example template demonstrating the Agent Transit manifest contract.",
+  "language": "typescript",
+  "entrypoint": "src/index.ts",
+  "categories": ["examples"],
+  "setup": {
+    "steps": [
+      "Install dependencies.",
+      "Set the required environment variables.",
+      "Run the agent."
+    ]
+  },
+  "env": [
+    {
+      "name": "ANTHROPIC_API_KEY",
+      "description": "API key for the LLM provider.",
+      "required": true,
+      "secret": true
+    }
+  ],
+  "integrations": [],
+  "permissions": [],
+  "outboundServices": ["api.anthropic.com"],
+  "pricing": { "model": "free" },
+  "deploy": {
+    "targets": ["vercel"],
+    "export": { "format": "zip" }
+  },
+  "support": {
+    "policy": "community",
+    "contact": "creator@example.com"
+  },
+  "license": "MIT"
+}

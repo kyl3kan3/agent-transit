@@ -1,0 +1,7 @@
+{
+  "name": "@agent-transit/scanner",
+  "version": "0.0.0",
+  "private": true,
+  "description": "V1 static scan pipeline for submitted template packages. Scaffold only — not implemented.",
+  "main": "src/pipeline.ts"
+}
